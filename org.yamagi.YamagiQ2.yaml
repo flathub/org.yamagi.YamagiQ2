@@ -31,8 +31,8 @@ modules:
   - mv ./release/ /app/bin/
   sources:
   - type: archive
-    url: https://github.com/yquake2/yquake2/archive/QUAKE2_7_43.tar.gz
-    sha256: aa5917fcdf9ab2e9e9c4c95e72482acf71bcead05aa6f9e155fc23eb2af7bac5
+    url: https://github.com/yquake2/yquake2/archive/QUAKE2_7_45.tar.gz
+    sha256: 9b5991295d617fdd1a27fd6d49c2e6f2e81ad71286d03fda3193d974b37f7c34
 
 - name: rogue
   buildsystem: cmake-ninja
