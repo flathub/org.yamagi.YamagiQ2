@@ -40,7 +40,7 @@ modules:
   config-opts:
   - -DCMAKE_BUILD_TYPE=RelWithDebInfo
   build-commands:
-  - install -D ./game.so /app/bin/roque/game.so
+  - install -D ./game.so /app/bin/rogue/game.so
   sources:
   - type: archive
     url: https://github.com/yquake2/rogue/archive/ROGUE_2_07.tar.gz
@@ -69,8 +69,7 @@ modules:
   - type: archive
     url: https://github.com/yquake2/ctf/archive/CTF_1_07.tar.gz
     sha256: bd178e6712f06490286e6389e801d02f2b3d7ab9f488543ac2900d9c24b98168
-    
- 
+
 - name: launcher
   buildsystem: simple
   sources:
