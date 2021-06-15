@@ -8,7 +8,6 @@ finish-args:
 - --device=dri
 - --socket=wayland
 - --socket=fallback-x11
-- --socket=x11
 - --share=ipc
 - --share=network
 - --socket=pulseaudio
@@ -16,10 +15,10 @@ finish-args:
 - --persist=.yq2
 
 cleanup:
-- /app/include
-- /app/lib/*.a
-- /app/lib/*.la
-- /app/lib/pkgconfig
+- /include
+- /lib/*.a
+- /lib/*.la
+- /lib/pkgconfig
 
 modules:
 - name: yamagi
@@ -31,8 +30,8 @@ modules:
   - mv ./release/ /app/bin/
   sources:
   - type: archive
-    url: https://github.com/yquake2/yquake2/archive/QUAKE2_7_45.tar.gz
-    sha256: 9b5991295d617fdd1a27fd6d49c2e6f2e81ad71286d03fda3193d974b37f7c34
+    url: https://github.com/yquake2/yquake2/archive/QUAKE2_8_00.tar.gz
+    sha256: 44114a766d0b05f6a5da2cb77e7a6a1c4795118f8d60d521097d2e9728f63348
 
 - name: rogue
   buildsystem: cmake-ninja
@@ -43,8 +42,8 @@ modules:
   - install -D ./game.so /app/bin/rogue/game.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/rogue/archive/ROGUE_2_07.tar.gz
-    sha256: eb102d77fc6ec2765c7cc57205bb704bc710b97e7d53ef5b1017e8a960c7e180
+    url: https://github.com/yquake2/rogue/archive/ROGUE_2_08.tar.gz
+    sha256: f716b442db10d94843e67ad3805ed254e125762f1488edbc1211f371d44d59ba
     
 - name: xatrix
   buildsystem: cmake-ninja
@@ -55,8 +54,8 @@ modules:
   - install -D ./game.so /app/bin/xatrix/game.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/xatrix/archive/XATRIX_2_08.tar.gz
-    sha256: 2f28b8bbf278f08112816a4098b001f662ad19e6c4cc4b132c57e7900eff90cf
+    url: https://github.com/yquake2/xatrix/archive/XATRIX_2_09.tar.gz
+    sha256: a079ea0de55761a06674184fb7103214f84fd741932aad03a71a8d7375e48ce8
 
 - name: ctf
   buildsystem: cmake-ninja
@@ -67,8 +66,18 @@ modules:
   - install -D ./game.so /app/bin/ctf/game.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/ctf/archive/CTF_1_07.tar.gz
-    sha256: bd178e6712f06490286e6389e801d02f2b3d7ab9f488543ac2900d9c24b98168
+    url: https://github.com/yquake2/ctf/archive/CTF_1_08.tar.gz
+    sha256: 1fa1cb8efbd612f96a85b15204f96b431d8c6c56f15c894960947ef9e44c2321
+
+- name: vulkan
+  buildsystem: simple
+  build-commands:
+  - make
+  - install -D ./release/ref_vk.so /app/bin/ref_vk.so
+  sources:
+  - type: archive
+    url: https://github.com/yquake2/ref_vk/archive/v1.0.1.tar.gz
+    sha256: 664c06511cfe5f9db67898258b75bac6a338bf3c5615ffc007bc6a34451097f3
 
 - name: launcher
   buildsystem: simple
