@@ -30,8 +30,12 @@ modules:
   - mv ./release/ /app/bin/
   sources:
   - type: archive
-    url: https://github.com/yquake2/yquake2/archive/QUAKE2_8_00.tar.gz
+    url: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_8_00.tar.gz
     sha256: 44114a766d0b05f6a5da2cb77e7a6a1c4795118f8d60d521097d2e9728f63348
+    x-checker-data:
+      type: anitya
+      project-id: 12336
+      url-template: https://github.com/yquake2/yquake2/archive/refs/tags/$version.tar.gz
 
 - name: rogue
   buildsystem: cmake-ninja
@@ -42,8 +46,12 @@ modules:
   - install -D ./game.so /app/bin/rogue/game.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/rogue/archive/ROGUE_2_08.tar.gz
+    url: https://github.com/yquake2/rogue/archive/refs/tags/ROGUE_2_08.tar.gz
     sha256: f716b442db10d94843e67ad3805ed254e125762f1488edbc1211f371d44d59ba
+    x-checker-data:
+      type: anitya
+      project-id: 15126
+      url-template: https://github.com/yquake2/rogue/archive/refs/tags/$version.tar.gz
     
 - name: xatrix
   buildsystem: cmake-ninja
@@ -54,8 +62,12 @@ modules:
   - install -D ./game.so /app/bin/xatrix/game.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/xatrix/archive/XATRIX_2_09.tar.gz
+    url: https://github.com/yquake2/xatrix/archive/refs/tags/XATRIX_2_09.tar.gz
     sha256: a079ea0de55761a06674184fb7103214f84fd741932aad03a71a8d7375e48ce8
+    x-checker-data:
+      type: anitya
+      project-id: 15127
+      url-template: https://github.com/yquake2/xatrix/archive/refs/tags/$version.tar.gz
 
 - name: ctf
   buildsystem: cmake-ninja
@@ -66,8 +78,12 @@ modules:
   - install -D ./game.so /app/bin/ctf/game.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/ctf/archive/CTF_1_08.tar.gz
+    url: https://github.com/yquake2/ctf/archive/refs/tags/CTF_1_08.tar.gz
     sha256: 1fa1cb8efbd612f96a85b15204f96b431d8c6c56f15c894960947ef9e44c2321
+    x-checker-data:
+      type: anitya
+      project-id: 15125
+      url-template: https://github.com/yquake2/ctf/archive/refs/tags/$version.tar.gz
 
 - name: vulkan
   buildsystem: simple
