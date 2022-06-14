@@ -92,8 +92,8 @@ modules:
   - install -D ./release/ref_vk.so /app/bin/ref_vk.so
   sources:
   - type: archive
-    url: https://github.com/yquake2/ref_vk/archive/v1.0.1.tar.gz
-    sha256: 664c06511cfe5f9db67898258b75bac6a338bf3c5615ffc007bc6a34451097f3
+    url: https://github.com/yquake2/ref_vk/archive/refs/tags/v1.0.2.tar.gz
+    sha256: ca1be2a53ec24cddd9858e10263722b3716af7bb8fa2a16c90cfd9419b160e8f
 
 - name: launcher
   buildsystem: simple
