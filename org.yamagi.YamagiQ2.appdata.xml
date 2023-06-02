@@ -54,6 +54,21 @@
   </screenshots>
 
   <releases>
+    <release version="8.2.0" date="2022-12-09">
+      <description>
+        <p>Stable release of Yamagi Quake 2 on Flatpak.</p>
+      </description>
+    </release>
+    <release version="8.1.0" date="2022-05-29">
+      <description>
+        <p>Stable release of Yamagi Quake 2 on Flatpak.</p>
+      </description>
+    </release>
+    <release version="8.0.1" date="2022-01-22">
+      <description>
+        <p>Stable release of Yamagi Quake 2 on Flatpak.</p>
+      </description>
+    </release>
     <release version="8.0.0" date="2021-06-14">
       <description>
         <p>Stable release of Yamagi Quake 2 on Flatpak.</p>
