@@ -57,6 +57,19 @@ modules:
         url: https://github.com/yquake2/xatrix/archive/refs/tags/XATRIX_2_11.tar.gz
         sha256: b47a31b6556c480451e87020cbcffdb21fa546b2751d25e7960658bf1aadec75
 
+  - name: zaero
+    buildsystem: cmake-ninja
+    no-make-install: true
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    build-commands:
+      - install -D ./game.so /app/bin/zaero/game.so
+    sources:
+      - type: git
+        url: https://github.com/yquake2/zaero.git
+        branch: master
+        commit: 50f18732f666b74a53b73ce64b8eeb2b324458da        
+
   - name: ctf
     buildsystem: cmake-ninja
     no-make-install: true
