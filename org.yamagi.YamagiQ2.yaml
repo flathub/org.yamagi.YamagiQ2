@@ -68,7 +68,7 @@ modules:
       - type: git
         url: https://github.com/yquake2/zaero.git
         branch: master
-        commit: 50f18732f666b74a53b73ce64b8eeb2b324458da        
+        commit: 2f785750867730011e01dbcfb9644133d03bee39        
 
   - name: ctf
     buildsystem: cmake-ninja
