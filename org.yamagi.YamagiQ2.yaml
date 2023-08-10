@@ -3,6 +3,7 @@ runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 runtime-version: "22.08"
 command: YamagiQ2.sh
+rename-icon: Quake2
 
 finish-args:
   - --socket=wayland
@@ -28,6 +29,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - mv ./release/ /app/bin/
+      - install -Dm 644 ./stuff/icon/Quake2.svg /app/share/icons/hicolor/scalable/apps/Quake2.svg
     sources:
       - type: archive
         url: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_8_20.tar.gz
@@ -104,11 +106,9 @@ modules:
         path: org.yamagi.YamagiQ2.desktop
       - type: file
         path: org.yamagi.YamagiQ2.appdata.xml
-      - type: file
-        path: org.yamagi.YamagiQ2.svg
     build-commands:
       - install -Dm 744 YamagiQ2.sh -t /app/bin
       - install -Dm 644 org.yamagi.YamagiQ2.desktop -t /app/share/applications
       - install -Dm 644 org.yamagi.YamagiQ2.appdata.xml -t /app/share/metainfo
-      - install -Dm 644 org.yamagi.YamagiQ2.svg /app/share/icons/hicolor/scalable/apps/org.yamagi.YamagiQ2.svg
 
+      
