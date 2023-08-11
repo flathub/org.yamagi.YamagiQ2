@@ -28,7 +28,6 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - mv ./release/ /app/bin/
-      - install -Dm 644 ./stuff/icon/Quake2.svg /app/share/icons/hicolor/scalable/apps/Quake2.svg
       - install -D ./stuff/mapfixes/baseq2/base2.ent /app/bin/baseq2/maps/foo.ent
       - install -D ./stuff/mapfixes/baseq2/base3.ent /app/bin/baseq2/maps/base3.ent
       - install -D ./stuff/mapfixes/baseq2/biggun.ent /app/bin/baseq2/maps/biggun.ent
