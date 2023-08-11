@@ -28,6 +28,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - mv ./release/ /app/bin/
+      - install ./stuff/yq2.cfg /app/bin/baseq2/yq2.cfg
     sources:
       - type: archive
         url: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_8_20.tar.gz
