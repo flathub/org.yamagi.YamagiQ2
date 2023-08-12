@@ -3,6 +3,7 @@ runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
 runtime-version: "22.08"
 command: YamagiQ2.sh
+rename-icon: Quake2
 
 finish-args:
   - --socket=wayland
@@ -28,6 +29,20 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - mv ./release/ /app/bin/
+      - install -Dm 644 ./stuff/icon/Quake2.svg /app/share/icons/hicolor/scalable/apps/Quake2.svg
+      - install -D ./stuff/mapfixes/baseq2/base2.ent /app/bin/baseq2/maps/foo.ent
+      - install -D ./stuff/mapfixes/baseq2/base3.ent /app/bin/baseq2/maps/base3.ent
+      - install -D ./stuff/mapfixes/baseq2/biggun.ent /app/bin/baseq2/maps/biggun.ent
+      - install -D ./stuff/mapfixes/baseq2/city1.ent /app/bin/baseq2/maps/city1.ent
+      - install -D ./stuff/mapfixes/baseq2/city2.ent /app/bin/baseq2/maps/city2.ent
+      - install -D ./stuff/mapfixes/baseq2/city3.ent /app/bin/baseq2/maps/city3.ent
+      - install -D ./stuff/mapfixes/baseq2/cool1.ent /app/bin/baseq2/maps/cool1.ent
+      - install -D ./stuff/mapfixes/baseq2/hangar1.ent /app/bin/baseq2/maps/hangar1.ent
+      - install -D ./stuff/mapfixes/baseq2/jail5.ent /app/bin/baseq2/maps/jail5.ent
+      - install -D ./stuff/mapfixes/baseq2/lab.ent /app/bin/baseq2/maps/lab.ent
+      - install -D ./stuff/mapfixes/baseq2/train.ent /app/bin/baseq2/maps/train.ent
+      - install -D ./stuff/mapfixes/baseq2/waste3.ent /app/bin/baseq2/maps/waste3.ent
+      - install -D ./stuff/mapfixes/juggernaut/jug19.ent /app/bin/juggernaut/maps/jug19.ent
     sources:
       - type: archive
         url: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_8_20.tar.gz
@@ -40,6 +55,11 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - install -D ./game.so /app/bin/rogue/game.so
+      - install -D ./stuff/mapfixes/rammo1.ent /app/bin/rogue/maps/rammo1.ent
+      - install -D ./stuff/mapfixes/rhangar2.ent /app/bin/rogue/maps/rhangar2.ent
+      - install -D ./stuff/mapfixes/rmine1.ent /app/bin/rogue/maps/rmine1.ent
+      - install -D ./stuff/mapfixes/rsewer2.ent /app/bin/rogue/maps/rsewer2.ent
+      - install -D ./stuff/mapfixes/rware2.ent /app/bin/rogue/maps/rware2.ent
     sources:
       - type: archive
         url: https://github.com/yquake2/rogue/archive/refs/tags/ROGUE_2_10.tar.gz
@@ -52,6 +72,9 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - install -D ./game.so /app/bin/xatrix/game.so
+      - install -D ./stuff/mapfixes/industry.ent /app/bin/xatrix/maps/industry.ent
+      - install -D ./stuff/mapfixes/w_treat.ent /app/bin/xatrix/maps/w_treat.ent
+      - install -D ./stuff/mapfixes/xintell.ent /app/bin/xatrix/maps/xintell.ent
     sources:
       - type: archive
         url: https://github.com/yquake2/xatrix/archive/refs/tags/XATRIX_2_11.tar.gz
@@ -64,6 +87,9 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     build-commands:
       - install -D ./game.so /app/bin/zaero/game.so
+      - install -D ./stuff/mapfixes/zdef4.ent /app/bin/zaero/maps/zdef4.ent
+      - install -D ./stuff/mapfixes/ztomb3.ent /app/bin/zaero/maps/ztomb3.ent
+      - install -D ./stuff/mapfixes/zwaste1.ent /app/bin/zaero/maps/zwaste1.ent
     sources:
       - type: git
         url: https://github.com/yquake2/zaero.git
@@ -105,13 +131,9 @@ modules:
       - type: file
         path: org.yamagi.YamagiQ2.appdata.xml
       - type: file
-        path: org.yamagi.YamagiQ2.svg
-      - type: file
         path: assets/footsteps.pkz
     build-commands:
       - install -Dm 744 YamagiQ2.sh -t /app/bin
       - install -Dm 644 org.yamagi.YamagiQ2.desktop -t /app/share/applications
       - install -Dm 644 org.yamagi.YamagiQ2.appdata.xml -t /app/share/metainfo
-      - install -Dm 644 org.yamagi.YamagiQ2.svg /app/share/icons/hicolor/scalable/apps/org.yamagi.YamagiQ2.svg
       - install -D ./assets/footsteps.pkz /app/bin/baseq2/footsteps.pkz
-
