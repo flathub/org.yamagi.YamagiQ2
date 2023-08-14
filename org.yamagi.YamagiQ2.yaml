@@ -94,6 +94,15 @@ modules:
         url: https://github.com/yquake2/ref_vk/archive/refs/tags/v1.0.5.tar.gz
         sha256: f1f930ff900908c2caeb1b66a6c17b2fdd4272cdeb61253d0342f0e28c26290e
 
+  - name: footsteps
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://deponie.yamagi.org/quake2/assets/footsteps.pkz
+        sha256: c9377846711b194f4bc1d848d9d3378ae2f94211f52f1503184dd33db7a6bcd4
+    build-commands:
+      - install -D ./footsteps.pkz /app/bin/baseq2/footsteps.pkz
+
   - name: launcher
     buildsystem: simple
     sources:
