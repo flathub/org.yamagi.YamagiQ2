@@ -1,7 +1,7 @@
 app-id: org.yamagi.YamagiQ2
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: "22.08"
+runtime-version: "23.08"
 command: YamagiQ2.sh
 rename-icon: Quake2
 
@@ -98,7 +98,7 @@ modules:
       - type: git
         url: https://github.com/yquake2/zaero.git
         branch: master
-        commit: 2f785750867730011e01dbcfb9644133d03bee39
+        commit: 30bc59a2a672a15137c27cb5999ee586edfc2586
 
   - name: ctf
     buildsystem: cmake-ninja
