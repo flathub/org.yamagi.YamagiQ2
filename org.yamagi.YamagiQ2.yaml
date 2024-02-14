@@ -98,7 +98,7 @@ modules:
       - type: git
         url: https://github.com/yquake2/zaero.git
         branch: master
-        commit: 30bc59a2a672a15137c27cb5999ee586edfc2586
+        commit: 52b16978463c6db88d1d24c25a3a1d0b85074f81
 
   - name: ctf
     buildsystem: cmake-ninja
@@ -148,7 +148,7 @@ modules:
         dest-filename: YamagiQ2.sh
         commands:
           - ls ~/.yq2/baseq2/pak0.pak || zenity --error --text "Game data (/baseq2/ etc.)  must be added to:\n~/.var/app/org.yamagi.YamagiQ2/.yq2/baseq2/" --ok-label "Close" --width=400
-          - /app/bin/quake2 "$@"
+          - exec /app/bin/quake2 "$@"
       - type: file
         path: org.yamagi.YamagiQ2.desktop
       - type: file
