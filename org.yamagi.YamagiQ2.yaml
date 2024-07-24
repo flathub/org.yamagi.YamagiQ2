@@ -128,8 +128,8 @@ modules:
       - install -D ./release/ref_gl4.so /app/bin/ref_gl4.so
     sources:
       - type: archive
-        url: https://github.com/yquake2/ref_gl4/archive/refs/heads/master.tar.gz
-        sha256: 21bf2315d9ef939fb7462e104b6e709056ee3a03b304fea6d4d1c048df37b636
+        url: https://github.com/yquake2/ref_gl4/archive/refs/tags/1.07.tar.gz
+        sha256: e8aae3a69795f781fd047c94152ae6356878cc7b6d7df1ba4075d1542563415d
 
   - name: footsteps
     buildsystem: simple
