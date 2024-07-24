@@ -97,8 +97,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/yquake2/zaero.git
-        branch: master
-        commit: 30bc59a2a672a15137c27cb5999ee586edfc2586
+        commit: 24844dc176adb6b6cf4e899f30935595bc6df715
 
   - name: ctf
     buildsystem: cmake-ninja
@@ -129,8 +128,8 @@ modules:
       - install -D ./release/ref_gl4.so /app/bin/ref_gl4.so
     sources:
       - type: archive
-        url: https://github.com/yquake2/ref_gl4/archive/refs/heads/master.tar.gz
-        sha256: 21bf2315d9ef939fb7462e104b6e709056ee3a03b304fea6d4d1c048df37b636
+        url: https://github.com/yquake2/ref_gl4/archive/refs/tags/1.07.tar.gz
+        sha256: e8aae3a69795f781fd047c94152ae6356878cc7b6d7df1ba4075d1542563415d
 
   - name: footsteps
     buildsystem: simple
