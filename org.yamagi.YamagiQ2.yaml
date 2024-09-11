@@ -46,8 +46,12 @@ modules:
       - install -D ./stuff/mapfixes/juggernaut/jug19.ent /app/bin/juggernaut/maps/jug19.ent
     sources:
       - type: archive
-        url: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_8_30.tar.gz
-        sha256: 388ba424cbe29e4a8e8dda0d448676600a00c66e3e4edc2b9660b551e19a3095
+        url: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_8_41.tar.gz
+        sha256: 22538a8a0ea304483d4ab342dcf87aabbd6aaa38da231bbbc26a8f330f787d09
+        x-checker-data:
+          type: anitya
+          project-id: 12336
+          url-template: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_$version.tar.gz
 
   - name: rogue
     buildsystem: cmake-ninja
@@ -64,8 +68,8 @@ modules:
       - install -D ./stuff/mapfixes/rware2.ent /app/bin/rogue/maps/rware2.ent
     sources:
       - type: archive
-        url: https://github.com/yquake2/rogue/archive/refs/tags/ROGUE_2_11.tar.gz
-        sha256: 050aebe4871f00d36dc0eec66b46dbb3fbbf4f8bd7438c31d8d5666fa8ed80b3
+        url: https://github.com/yquake2/rogue/archive/refs/tags/ROGUE_2_12.tar.gz
+        sha256: 1cb4fb04cbc7c3dcdff45db476375ce360eaf13f8f02d59953ef6487e2dd8a77
 
   - name: xatrix
     buildsystem: cmake-ninja
@@ -80,8 +84,8 @@ modules:
       - install -D ./stuff/mapfixes/xintell.ent /app/bin/xatrix/maps/xintell.ent
     sources:
       - type: archive
-        url: https://github.com/yquake2/xatrix/archive/refs/tags/XATRIX_2_12.tar.gz
-        sha256: e8b56a8f085293ba03fb808e4a946d9ab93a92e6b2b561a3b6458921899e4338
+        url: https://github.com/yquake2/xatrix/archive/refs/tags/XATRIX_2_13.tar.gz
+        sha256: 850f6202fff2c6082ddb808c599e3564cde6ba35cb816f8a528c655f97e4ac8a
 
   - name: zaero
     buildsystem: cmake-ninja
@@ -97,7 +101,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/yquake2/zaero.git
-        commit: 24844dc176adb6b6cf4e899f30935595bc6df715
+        commit: b3e169bac65834e21fbb510391653de9d238b8ec
 
   - name: ctf
     buildsystem: cmake-ninja
@@ -118,8 +122,8 @@ modules:
       - install -D ./release/ref_vk.so /app/bin/ref_vk.so
     sources:
       - type: archive
-        url: https://github.com/yquake2/ref_vk/archive/refs/tags/v1.0.7.tar.gz
-        sha256: afa9a38eab633ed5193584c679e5c1e200b892a6d699024718238a47c17b7de7
+        url: https://github.com/yquake2/ref_vk/archive/refs/tags/v1.0.8.tar.gz
+        sha256: 52fe24a7cfeab35011ef4e668cb8b90167bfdab17cca108defdc9f71f3facaf3
         
   - name: gl4
     buildsystem: simple
