@@ -1,7 +1,7 @@
 app-id: org.yamagi.YamagiQ2
 runtime: org.freedesktop.Platform
 sdk: org.freedesktop.Sdk
-runtime-version: '24.08'
+runtime-version: '25.08'
 command: YamagiQ2.sh
 rename-icon: Quake2
 
@@ -59,6 +59,7 @@ modules:
     no-make-install: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     build-commands:
       - install -D ./game.so /app/bin/rogue/game.so
       # Fixes  from the community
@@ -77,6 +78,7 @@ modules:
     no-make-install: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     build-commands:
       - install -D ./game.so /app/bin/xatrix/game.so
       # Fixes  from the community
@@ -93,6 +95,7 @@ modules:
     no-make-install: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     build-commands:
       - install -D ./game.so /app/bin/zaero/game.so
       # Fixes from the community
@@ -109,6 +112,7 @@ modules:
     no-make-install: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     build-commands:
       - install -D ./game.so /app/bin/ctf/game.so
     sources:
@@ -126,15 +130,17 @@ modules:
         url: https://github.com/yquake2/ref_vk/archive/refs/tags/v1.0.10.tar.gz
         sha256: 52e1078bd0c85183baae30fc899269551ca3ff1c4251e4a96416f7a0bf4eae95
         
+  # https://github.com/yquake2/ref_gl4/issues/6      
   - name: gl4
+    disabled: true
     buildsystem: simple
     build-commands:
       - make
       - install -D ./release/ref_gl4.so /app/bin/ref_gl4.so
     sources:
       - type: archive
-        url: https://github.com/yquake2/ref_gl4/archive/refs/tags/1.08.tar.gz
-        sha256: 9aa73e1283bde71b7fa99fe3b23d34f3b08a2f8266b467834ba7b435b787f2de
+        url: https://github.com/yquake2/ref_gl4/archive/refs/tags/1.09.tar.gz
+        sha256: b2d1cee5e037d9131b3ece058701c4d52ac6ec778cfca471baf51f9aee54c90b
 
   - name: footsteps
     buildsystem: simple
