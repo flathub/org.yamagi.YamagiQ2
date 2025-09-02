@@ -9,3 +9,12 @@ PrefersNonDefaultGPU=true
 Terminal=false
 Type=Application
 Keywords=quake;first;person;shooter;multiplayer;
+Actions=xatrix;roque;
+
+[Desktop Action xatrix]
+Name=The Reckoning
+Exec=YamagiQ2.sh +set game xatrix 
+
+[Desktop Action roque]
+Name=Ground Zero
+Exec=YamagiQ2.sh +set game rogue
