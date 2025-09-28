@@ -142,7 +142,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/yquake2/ref_gl4
-        branch: master
         commit: 3bb925b3cd07d7b14dc7b44b45950bd42ebd0642
 
   - name: footsteps
