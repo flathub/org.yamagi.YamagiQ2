@@ -135,15 +135,14 @@ modules:
         
   # https://github.com/yquake2/ref_gl4/issues/6      
   - name: gl4
-    disabled: true
     buildsystem: simple
     build-commands:
       - make
       - install -D ./release/ref_gl4.so /app/bin/ref_gl4.so
     sources:
-      - type: archive
-        url: https://github.com/yquake2/ref_gl4/archive/refs/tags/1.09.tar.gz
-        sha256: b2d1cee5e037d9131b3ece058701c4d52ac6ec778cfca471baf51f9aee54c90b
+      - type: git
+        url: https://github.com/yquake2/ref_gl4
+        commit: 3bb925b3cd07d7b14dc7b44b45950bd42ebd0642
 
   - name: footsteps
     buildsystem: simple
