@@ -54,7 +54,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 12336
-          url-template: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_$version.tar.gz
+          url-template: https://github.com/yquake2/yquake2/archive/refs/tags/QUAKE2_${major}_${minor}.tar.gz
 
   - name: rogue
     buildsystem: cmake-ninja
